@@ -14,23 +14,42 @@
 module.exports = {
     extends: [
         '@commitlint/config-conventional'
-    ],
-    rules: {
-        'type-enum': [
-            2,           // 表示必须输入的
-            'always', [
-              'fix',
-              'feat',
-              'docs',
-              'style',
-              'refactor',
-              'perf',
-              'test',
-              'chore',
-              'merge',
-              'revert'
-             ]
-        ]
-     
+  ],
+  prompt: {
+    questions: {
+      type: {
+        description: 'commit类型选择',
+        enum: {
+          "feat": {
+            "description": "新功能",
+            "title": '新功能',
+            "emoji": '**'
+          },
+          "fix": {
+            "description": "修复一个bug",
+            "title": '修复一个bug',
+            "emoji": '**'
+          }
+        }
+      }
     }
+  },
+    // rules: {
+    //     'type-enum': [
+    //         2,           // 表示必须输入的
+    //         'always', [
+    //           'fix',
+    //           'feat',
+    //           'docs',
+    //           'style',
+    //           'refactor',
+    //           'perf',
+    //           'test',
+    //           'chore',
+    //           'merge',
+    //           'revert'
+    //          ]
+    //     ]
+     
+    // }
 };
