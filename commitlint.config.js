@@ -13,8 +13,7 @@
  
 module.exports = {
     extends: [
-    '@commitlint/config-conventional',
-    '@commitlint/cz-commitlint'
+    '@commitlint/config-conventional'
   ],
   rules: {
     'scope-enum': [2, 'always', ['a', 'b']],
