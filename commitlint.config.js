@@ -16,6 +16,7 @@ module.exports = {
         '@commitlint/config-conventional'
   ],
   rules: {
+      'scope-enum': [2, 'always', ['a', 'b']],
       'type-enum': [
           2,           // 表示必须输入的
           'always', [
