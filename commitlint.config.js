@@ -13,25 +13,56 @@
  
 module.exports = {
     extends: [
-        '@commitlint/config-conventional'
+    '@commitlint/config-conventional',
+    '@commitlint/cz-commitlint'
   ],
   rules: {
-      'scope-enum': [2, 'always', ['a', 'b']],
-      'type-enum': [
-          2,           // 表示必须输入的
-          'always', [
-            'fix',
-            'feat',
-            'docs',
-            'style',
-            'refactor',
-            'perf',
-            'test',
-            'chore',
-            'merge',
-            'revert'
-            ]
-      ]
+    'scope-enum': [2, 'always', ['a', 'b']],
     
-  }
+    
+      // 'type-enum': [
+      //     2,           // 表示必须输入的
+      //     'always', [
+      //       'fix',
+      //       'feat',
+      //       'docs',
+      //       'style',
+      //       'refactor',
+      //       'perf',
+      //       'test',
+      //       'chore',
+      //       'merge',
+      //       'revert'
+      //       ]
+      // ]
+    
+  },
+  prompt: {
+    settings: {
+      enableMultipleScopes: true,
+      scopeEnumSeparator: '000',
+      enableMultipleScopes: true
+    },
+    messages: {
+      skip: ':skip',
+      max: 'upper %d chars',
+      min: '%d chars at least',
+      emptyWarning: 'can not be empty',
+      upperLimitWarning: 'over limit',
+      lowerLimitWarning: 'below limit'
+    },
+    questions: {
+      type: {
+        description: "ertert",
+        enum: {
+          feat: {
+            description: '新功能',
+            title: 'Features',
+            emoji: '✨',
+          },
+        }
+      }
+    }
+  },
+  
 };
