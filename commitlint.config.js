@@ -15,23 +15,22 @@ module.exports = {
     extends: [
         '@commitlint/config-conventional'
   ],
- 
-    // rules: {
-    //     'type-enum': [
-    //         2,           // 表示必须输入的
-    //         'always', [
-    //           'fix',
-    //           'feat',
-    //           'docs',
-    //           'style',
-    //           'refactor',
-    //           'perf',
-    //           'test',
-    //           'chore',
-    //           'merge',
-    //           'revert'
-    //          ]
-    //     ]
-     
-    // }
+  rules: {
+      'type-enum': [
+          2,           // 表示必须输入的
+          'always', [
+            'fix',
+            'feat',
+            'docs',
+            'style',
+            'refactor',
+            'perf',
+            'test',
+            'chore',
+            'merge',
+            'revert'
+            ]
+      ]
+    
+  }
 };
