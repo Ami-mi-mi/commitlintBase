@@ -1,4 +1,16 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+#采用线上的commitlint
 npx --no-install commitlint --edit $1
+
+#采用依赖包中的node_modules中的commitlint
+#./node_modules/.bin/commitlint --edit
+#如果使用node_modules中的commtlint,那么在commitlint.config.js中
+#  extends: [
+#     '@commitlint/config-conventional'
+#  ],
+# 也需要对应的修改为
+#  extends: [
+#      './node_modules/@commitlint/config-conventional'
+# ],

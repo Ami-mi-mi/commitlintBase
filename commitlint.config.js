@@ -1,14 +1,14 @@
 /**
- * jira_id：关联jira的issue ID 用于关联动作 必填
- * feat：新功能
- * update：更新某功能
- * fixbug：修补某功能的bug
- * refactor：重构某个功能
- * optimize: 优化构建工具或运行时性能
- * style：仅样式改动
- * docs：仅文档新增/改动
- * chore：构建过程或辅助工具的变动
-  
+ * fix: 表示修复了一个 bug（这和语义化版本中的 PATCH 相对应）。
+ * feat: 表示新增了一个功能（这和语义化版本中的 MINOR 相对应）。
+ * docs: 表示修改了文档，没有影响代码。
+ * style: 表示修改了代码风格，不影响代码原功能。
+ * refactor: 表示重构，不同于 style，是在设计层面的修改。
+ * perf: 表示提升性能。
+ * test: 表示修改了测试代码。
+ * chore: 表示其他杂项修改，build、ci 之类的修改也在这里面。
+ * merge: 表示合入代码，在手动提交时使用。Gitlab MR 合入时可以保持默认消息格式。
+ * revert: 表示 revert 之前的代码，在手动提交时使用。Gitlab 提供的默认 Revert 消息可以保持。
  */
  
 module.exports = {
@@ -19,15 +19,16 @@ module.exports = {
         'type-enum': [
             2,           // 表示必须输入的
             'always', [
-                'jira_id', 
-                'feat', 
-                'update', 
-                'fix', 
-                'refactor', 
-                'optimize', 
-                'style', 
-                'docs', 
-                'chore'
+              'fix',
+              'feat',
+              'docs',
+              'style',
+              'refactor',
+              'perf',
+              'test',
+              'chore',
+              'merge',
+              'revert'
              ]
         ]
      
